@@ -30,5 +30,31 @@
     </nav>
 </div>
     <h1>PEDIDO</h1>
+    <form id="pedido">
+    <p>Nombre: <input type="text" id="nombre" name="nombre" size="38"></p>
+    <p>Apellido: <input type="text"id="apellido" name="apellido" size="38"></p>
+    <p>Telefono: <input type="text"id="telefono" name="telefono" size="38"></p>
+    <p>Direccion:<input type="text"id="direccion" name="direccion" size="38"></p>
+    <p>Colonia: <input type="text"id="colonia" name="colonia" size="38"></p>   
+    </ul>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+</form>
+<script>
+    const form=document.getElementById("pedido");
+    form.addEventListener("submit", function(event)(event.preventDefault()));
+    const formData=new FormData(form);
+    const orden={
+        nombre:formData.get(nombre);
+        apellido:formData.get(apellido);
+        telefono:formData.get(telefono);
+        direccion:formData.get(direccion);
+        colonia:formData.get(colonia);
+     };
+
+     localStorage.setItem("orden",JSON.stringify(orden));
+     window.location.href="pedidorealizado.html";
+     
+
 </body>
 </html>
