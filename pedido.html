@@ -39,10 +39,21 @@
     <p>Colonia: <input type="text"id="colonia" name="colonia" size="30"></p>   
    
 
-    <br>
+    <hr>
     <select name="menu" id="menu">
+
+        <optgroup label="Quesadillas">
         <option value="hamburguesa">Hamburguesa</option>
         <option value="tacos">Tacos</option>
+        <option value="enchiladas">Enchiladas</option>
+        <option value="sopes">Sopes</option>
+        <optgroup label="tacosdorados">TacosDorados</optgroup>
+        <option value="hotdog">HotDog</option>
+        <option value="huaraches">Huaraches</option>
+        <option value="caldoderes">CaldodeRes</option>
+        <option value="pozole">Pozole</option>
+
+    </optgroup>
     </select>
 
    <titulo1>Verduras</titulo1><br>
@@ -67,6 +78,8 @@
         telefono:formData.get("telefono"),
         direccion:formData.get("direccion"),
         colonia:formData.get("colonia"),
+        tomate:formData.getElementById("tomate").checked ? "SI": "NO",
+        Cebolla:formData.getElementById("tomate").checked ? "SI": "NO",
         
      };
 
